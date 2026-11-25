@@ -1,3 +1,7 @@
+if makefolder and isfolder and not isfolder("MorphOrb") then makefolder("MorphOrb") end
+local path="MorphOrb/gul.mp3"
+if writefile and isfile and not isfile(path) then pcall(function() writefile(path, game:HttpGet("https://githubusercontent.com")) end) end
+local snd=(isfile and isfile(path) and getcustomasset) and getcustomasset(path) or ""
 game:GetService("StarterGui"):SetCoreGuiEnabled("Backpack",true)
 local P,R,T=game:GetService("Players"),game:GetService("RunService"),game:GetService("TweenService")
 local plr,cam=P.LocalPlayer,workspace.CurrentCamera
